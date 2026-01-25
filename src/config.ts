@@ -9,7 +9,7 @@ import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
 	title: "FIRST-VPS",
-	subtitle: "Demo Site",
+	subtitle: "Demo",
 	lang: "zh_CN", // 语言代码，例如 'en', 'zh_CN', 'ja' 等
 	themeColor: {
 		hue: 250, // 主题颜色的默认色调，范围从0到360。例如：红色: 0, 青色: 200, 蓝绿色: 250, 粉色: 345
@@ -26,15 +26,15 @@ export const siteConfig: SiteConfig = {
 		},
 	},
 	toc: {
-		enable: true, // Display the table of contents on the right side of the post
-		depth: 2, // Maximum heading depth to show in the table, from 1 to 3
+		enable: true, // 在文章右侧显示目录
+		depth: 2, // 目录中显示的最大标题深度，从1到3
 	},
 	favicon: [
-		// Leave this array empty to use the default favicon
+		// 留空此数组以使用默认favicon
 		// {
-		//   src: '/favicon/icon.png',    // Path of the favicon, relative to the /public directory
-		//   theme: 'light',              // (Optional) Either 'light' or 'dark', set only if you have different favicons for light and dark mode
-		//   sizes: '32x32',              // (Optional) Size of the favicon, set only if you have favicons of different sizes
+		//   src: '/favicon/icon.png',    // favicon的路径，相对于/public目录
+		//   theme: 'light',              // （可选）'light'或'dark'，仅在亮色和暗色模式有不同的favicon时设置
+		//   sizes: '32x32',              // （可选）favicon的大小，仅在有多种尺寸的favicon时设置
 		// }
 	],
 };
@@ -46,8 +46,8 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.About,
 		{
 			name: "GitHub",
-			url: "https://github.com/xingshanze12-oss", // Internal links should not include the base path, as it is automatically added
-			external: true, // Show an external link icon and will open in a new tab
+			url: "https://github.com/xingshanze12-oss", // 内部链接不应包含基础路径，因为会自动添加
+			external: true, // 显示外部链接图标并在新标签页中打开
 		},
 	],
 };
@@ -59,8 +59,8 @@ export const profileConfig: ProfileConfig = {
 	links: [
 		{
 			name: "Twitter",
-			icon: "fa6-brands:twitter", // Visit https://icones.js.org/ for icon codes
-			// You will need to install the corresponding icon set if it's not already included
+			icon: "fa6-brands:twitter", // 访问 https://icones.js.org/ 获取图标代码
+			// 如果尚未包含相应的图标集，您需要安装它
 			// `pnpm add @iconify-json/<icon-set-name>`
 			url: "https://twitter.com",
 		},
@@ -78,13 +78,13 @@ export const profileConfig: ProfileConfig = {
 };
 
 export const licenseConfig: LicenseConfig = {
-	enable: true,
+	enable: false,
 	name: "CC BY-NC-SA 4.0",
 	url: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
 };
 
 export const expressiveCodeConfig: ExpressiveCodeConfig = {
-	// Note: Some styles (such as background color) are being overridden, see the astro.config.mjs file.
-	// Please select a dark theme, as this blog theme currently only supports dark background color
+	// 注意：某些样式（如背景颜色）被覆盖，请参见astro.config.mjs文件。
+	// 请选择暗色主题，因为此博客主题目前仅支持深色背景
 	theme: "github-dark",
 };
