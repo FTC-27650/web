@@ -6,14 +6,10 @@ import { i18n } from "../i18n/translation";
 import { getPostUrlBySlug } from "../utils/url-utils";
 import type { PostForList } from "../utils/content-utils";
 
-export let tags: string[];
-export let categories: string[];
+export let tags: string[] = [];
+export let categories: string[] = [];
 export let sortedPosts: PostForList[] = [];
 
-const params = new URLSearchParams(window.location.search);
-tags = params.has("tag") ? params.getAll("tag") : [];
-categories = params.has("category") ? params.getAll("category") : [];
-const uncategorized = params.get("uncategorized");
 let groups: { year: number; posts: PostForList[] }[] = [];
 
 function formatDate(date: Date) {
@@ -27,19 +23,25 @@ function formatTag(tagList: string[]) {
 }
 
 onMount(async () => {
+	// Parse URL parameters only on client side
+	const params = new URLSearchParams(window.location.search);
+	const urlTags = params.has("tag") ? params.getAll("tag") : [];
+	const urlCategories = params.has("category") ? params.getAll("category") : [];
+	const uncategorized = params.get("uncategorized");
+	
 	let filteredPosts: PostForList[] = sortedPosts;
 
-	if (tags.length > 0) {
+	if (urlTags.length > 0) {
 		filteredPosts = filteredPosts.filter(
 			(post) =>
 				Array.isArray(post.data.tags) &&
-				post.data.tags.some((tag) => tags.includes(tag)),
+				post.data.tags.some((tag) => urlTags.includes(tag)),
 		);
 	}
 
-	if (categories.length > 0) {
+	if (urlCategories.length > 0) {
 		filteredPosts = filteredPosts.filter(
-			(post) => post.data.category && categories.includes(post.data.category),
+			(post) => post.data.category && urlCategories.includes(post.data.category),
 		);
 	}
 
