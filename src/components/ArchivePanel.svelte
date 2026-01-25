@@ -4,13 +4,32 @@ import { onMount } from "svelte";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
 import { getPostUrlBySlug } from "../utils/url-utils";
-import type { PostForList } from "../utils/content-utils";
 
-export let tags: string[] = [];
-export let categories: string[] = [];
-export let sortedPosts: PostForList[] = [];
+export let tags: string[];
+export let categories: string[];
+export let sortedPosts: Post[] = [];
 
-let groups: { year: number; posts: PostForList[] }[] = [];
+const params = new URLSearchParams(window.location.search);
+tags = params.has("tag") ? params.getAll("tag") : [];
+categories = params.has("category") ? params.getAll("category") : [];
+const uncategorized = params.get("uncategorized");
+
+interface Post {
+	slug: string;
+	data: {
+		title: string;
+		tags: string[];
+		category?: string;
+		published: Date;
+	};
+}
+
+interface Group {
+	year: number;
+	posts: Post[];
+}
+
+let groups: Group[] = [];
 
 function formatDate(date: Date) {
 	const month = (date.getMonth() + 1).toString().padStart(2, "0");
@@ -23,25 +42,19 @@ function formatTag(tagList: string[]) {
 }
 
 onMount(async () => {
-	// Parse URL parameters only on client side
-	const params = new URLSearchParams(window.location.search);
-	const urlTags = params.has("tag") ? params.getAll("tag") : [];
-	const urlCategories = params.has("category") ? params.getAll("category") : [];
-	const uncategorized = params.get("uncategorized");
-	
-	let filteredPosts: PostForList[] = sortedPosts;
+	let filteredPosts: Post[] = sortedPosts;
 
-	if (urlTags.length > 0) {
+	if (tags.length > 0) {
 		filteredPosts = filteredPosts.filter(
 			(post) =>
 				Array.isArray(post.data.tags) &&
-				post.data.tags.some((tag) => urlTags.includes(tag)),
+				post.data.tags.some((tag) => tags.includes(tag)),
 		);
 	}
 
-	if (urlCategories.length > 0) {
+	if (categories.length > 0) {
 		filteredPosts = filteredPosts.filter(
-			(post) => post.data.category && urlCategories.includes(post.data.category),
+			(post) => post.data.category && categories.includes(post.data.category),
 		);
 	}
 
@@ -58,7 +71,7 @@ onMount(async () => {
 			acc[year].push(post);
 			return acc;
 		},
-		{} as Record<number, PostForList[]>,
+		{} as Record<number, Post[]>,
 	);
 
 	const groupedPostsArray = Object.keys(grouped).map((yearStr) => ({

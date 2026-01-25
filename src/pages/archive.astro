@@ -4,15 +4,11 @@ import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
 import { getSortedPostsList } from "../utils/content-utils";
-import { getTagList, getCategoryList } from "../utils/content-utils";
 
 const sortedPostsList = await getSortedPostsList();
-const tags = await getTagList();
-const categories = await getCategoryList();
 ---
 
 <MainGridLayout title={i18n(I18nKey.archive)}>
-    <ArchivePanel sortedPosts={sortedPostsList} tags={tags.map(tag => tag.name)} categories={categories.map(category => category.name)}></ArchivePanel>
+    <ArchivePanel sortedPosts={sortedPostsList} client:only="svelte"></ArchivePanel>
 </MainGridLayout>
-
 
