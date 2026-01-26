@@ -1,6 +1,6 @@
 # About
-This is the demo site for Fuwari .
+This is the website about FIRST FTC Team 27650. 
 
 
-::github{repo="saicaca/fuwari"}
+
 

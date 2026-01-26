@@ -8,7 +8,7 @@ import type {
 import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
-	title: "FIRST-VPS",
+	title: "FIRST-27650",
 	subtitle: "Demo",
 	lang: "zh_CN", // 语言代码，例如 'en', 'zh_CN', 'ja' 等
 	themeColor: {
@@ -46,7 +46,7 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.About,
 		{
 			name: "GitHub",
-			url: "https://github.com/xingshanze12-oss", // 内部链接不应包含基础路径，因为会自动添加
+			url: "https://github.com/FTC-27650", // 内部链接不应包含基础路径，因为会自动添加
 			external: true, // 显示外部链接图标并在新标签页中打开
 		},
 	],
@@ -54,8 +54,8 @@ export const navBarConfig: NavBarConfig = {
 
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/demo-avatar.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
-	name: "test VPS",
-	bio: "新手宝宝，不会用，学习ing...",
+	name: "Team 27650",
+	bio: "Build More Than Robots",
 	links: [
 		{
 			name: "Twitter",
