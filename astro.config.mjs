@@ -26,8 +26,8 @@ import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-cop
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://xingshanze12-oss.github.io/",
-	base: "/potential-barnacle",
+	site: "https://fuwari.vercel.app/",
+	base: "/",
 	trailingSlash: "always",
 	integrations: [
 		tailwind({
