@@ -4,3 +4,13 @@ exclude_selectors:
   - "[data-pagefind-ignore]"
   - ".search-panel"
   - "#search-panel"
+
+# 支持中文搜索的配置
+root_selector: "html"
+language:
+  - "zh"
+  - "zh-CN"
+  - "zh_CN"
+
+# 强制使用扩展版本以支持中文
+force_language: "zh"

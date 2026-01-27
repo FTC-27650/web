@@ -9,7 +9,7 @@ import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
 	title: "FIRST-27650",
-	subtitle: "Demo",
+	subtitle: "",
 	lang: "zh_CN", // 语言代码，例如 'en', 'zh_CN', 'ja' 等
 	themeColor: {
 		hue: 250, // 主题颜色的默认色调，范围从0到360。例如：红色: 0, 青色: 200, 蓝绿色: 250, 粉色: 345
@@ -58,16 +58,16 @@ export const profileConfig: ProfileConfig = {
 	bio: "Build More Than Robots",
 	links: [
 		{
-			name: "Twitter",
-			icon: "fa6-brands:twitter", // 访问 https://icones.js.org/ 获取图标代码
+			name: "Bilibili",
+			icon: "ant-design:bilibili-filled", // 访问 https://icones.js.org/ 获取图标代码
 			// 如果尚未包含相应的图标集，您需要安装它
 			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "https://twitter.com",
+			url: "https://bilibili.com",
 		},
 		{
-			name: "Steam",
-			icon: "fa6-brands:steam",
-			url: "https://store.steampowered.com",
+			name: "Wechat",
+			icon: "ic:baseline-wechat",
+			url: "https://weixin.qq.com/",
 		},
 		{
 			name: "GitHub",
@@ -78,7 +78,7 @@ export const profileConfig: ProfileConfig = {
 };
 
 export const licenseConfig: LicenseConfig = {
-	enable: false,
+	enable: true,
 	name: "CC BY-NC-SA 4.0",
 	url: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
 };

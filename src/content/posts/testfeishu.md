@@ -1,7 +1,11 @@
 ---
 title: 测试飞书转换为markdown
-published: 2026-01-26
-description: test feishu to .md
+published: 2026-01-27
+description: test feishu to markdown
+tags: [测试,code,飞书]
+category: test
+image: "guide/cover.jpeg"
+draft: false
 ---
 # 邢善泽的工程笔记
 
@@ -724,7 +728,7 @@ public class MyRobotHardware_27650_TeleOp {
 
 # 10.12
 
-[王泽国的日志](https://ftc-27650.feishu.cn/docx/KwNwdRKAIoFSTvxmnLGcsQeNnUf)第四点，测试各种飞轮发射装置，编写以转速为条件的伺服电机控制程序(Dc motor EX)。得出结论：单电机单飞轮装置的动力不足以将标本投入框中，双飞轮发射器的动力足够，角度合适。运用基于 iPhone 的角度测量仪精准测量角度，建议实装时用一个
+[王泽国的日志]第四点，测试各种飞轮发射装置，编写以转速为条件的伺服电机控制程序(Dc motor EX)。得出结论：单电机单飞轮装置的动力不足以将标本投入框中，双飞轮发射器的动力足够，角度合适。运用基于 iPhone 的角度测量仪精准测量角度，建议实装时用一个
 
 ![](static/CuyjbQVSboiyqFxyTiKcDVTZnbb.jpeg)
 
