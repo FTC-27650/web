@@ -62,7 +62,7 @@ export const profileConfig: ProfileConfig = {
 			icon: "ant-design:bilibili-filled", // 访问 https://icones.js.org/ 获取图标代码
 			// 如果尚未包含相应的图标集，您需要安装它
 			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "https://bilibili.com",
+			url: "https://space.bilibili.com/151675070",
 		},
 		{
 			name: "Wechat",
