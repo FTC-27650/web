@@ -2,6 +2,8 @@
 title: README this
 published: 2026-01-25
 description: A simple example of this web.
+tags: [示例]
+category: example
 draft: false
 ---
 
