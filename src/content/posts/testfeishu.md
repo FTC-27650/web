@@ -4,7 +4,6 @@ published: 2026-01-27
 description: test feishu to markdown
 tags: [飞书]
 category: test
-image: "guide/cover.jpeg"
 draft: false
 ---
 # 邢善泽的工程笔记
