@@ -65,9 +65,9 @@ export const profileConfig: ProfileConfig = {
 			url: "https://space.bilibili.com/151675070",
 		},
 		{
-			name: "Wechat",
-			icon: "ic:baseline-wechat",
-			url: "https://weixin.qq.com/",
+			name: "mail",
+			icon: "material-symbols:attach-email",
+			url: "mailto:shanze12@zx.tn",
 		},
 		{
 			name: "GitHub",
