@@ -67,7 +67,7 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "mail",
 			icon: "material-symbols:attach-email",
-			url: "mailto:shanze12@zx.tn",
+			url: "mailto:first27650@163.com",
 		},
 		{
 			name: "GitHub",
