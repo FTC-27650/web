@@ -44,11 +44,7 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Home,
 		LinkPreset.Archive,
 		LinkPreset.About,
-		{
-			name: "GitHub",
-			url: "https://github.com/FTC-27650", // 内部链接不应包含基础路径，因为会自动添加
-			external: false, // 显示外部链接图标并在新标签页中打开
-		},
+
 	],
 };
 
